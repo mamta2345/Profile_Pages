@@ -190,18 +190,7 @@ class EditProfilePage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             GestureDetector(
-              onTap: () {
-                Get.defaultDialog(
-                  title: "Delete my account",
-                  content: TextField(
-                    onChanged: (value) => controller.bio.value = value,
-                  ),
-                  confirm: ElevatedButton(
-                    onPressed: () => Get.back(),
-                    child: Text("Save"),
-                  ),
-                );
-              },
+              onTap: () {},
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 12),
                 decoration: BoxDecoration(
