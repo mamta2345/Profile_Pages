@@ -16,7 +16,11 @@ class EditProfilePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.arrow_back, size: 24, color: Colors.white),
+            SizedBox(height: 20),
+            IconButton(
+              onPressed: () => Get.back(),
+              icon: Icon(Icons.arrow_back, size: 24, color: Colors.white),
+            ),
             SizedBox(height: 20),
             Text(
               "Edit Profile",
@@ -155,7 +159,7 @@ class EditProfilePage extends StatelessWidget {
                   Divider(color: Colors.white10, height: 20),
 
                   infoRow(
-                    'assets/icons/icon.png',
+                    'assets/icons/twitter.png',
                     "x(Twitter)",
                     controller.gender.value,
                   ),

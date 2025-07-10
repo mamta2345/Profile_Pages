@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:profile_pages/Controller/page_controller.dart';
 import 'package:profile_pages/Home_Pages/edit_profile_page.dart';
+import 'package:profile_pages/Home_Pages/login_page.dart';
 import 'package:profile_pages/Reusable/image_reusable.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -28,7 +29,7 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header Row: Logo + Close
+              SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 8,
@@ -73,7 +74,9 @@ class ProfilePage extends StatelessWidget {
                 "App loopin",
                 () {},
               ),
-              _buildMenuItem("assets/icons/Logout.png", "Log out", () {}),
+              _buildMenuItem("assets/icons/Logout.png", "Log out", () {
+                Get.offAll(() => LoginPage());
+              }),
             ],
           ),
         ),
