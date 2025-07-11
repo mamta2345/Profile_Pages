@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:profile_pages/Controller/edit_profil.contoller.dart';
 
 class EditProfilePage extends StatelessWidget {
@@ -24,7 +25,7 @@ class EditProfilePage extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               "Edit Profile",
-              style: TextStyle(
+              style: GoogleFonts.bricolageGrotesque(
                 color: Colors.white,
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -34,7 +35,10 @@ class EditProfilePage extends StatelessWidget {
               title: Obx(
                 () => Text(
                   controller.name.value,
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                  style: GoogleFonts.bricolageGrotesque(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
                 ),
               ),
               subtitle: Column(
@@ -72,7 +76,10 @@ class EditProfilePage extends StatelessWidget {
 
             Text(
               "Personal details",
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: GoogleFonts.bricolageGrotesque(
+                color: Colors.white,
+                fontSize: 16,
+              ),
             ),
             sectionCard(
               subtitle: Column(
@@ -118,7 +125,13 @@ class EditProfilePage extends StatelessWidget {
                     colorBlendMode: BlendMode.srcIn,
                   ),
                   SizedBox(width: 8),
-                  Text("Bio", style: TextStyle(color: Colors.white)),
+                  Text(
+                    "Bio",
+                    style: GoogleFonts.bricolageGrotesque(
+                      color: Colors.white,
+                      fontSize: 14,
+                    ),
+                  ),
                 ],
               ),
               subtitle: Obx(
@@ -126,7 +139,7 @@ class EditProfilePage extends StatelessWidget {
                   controller.bio.value.isEmpty
                       ? 'Bio not yet added'
                       : controller.bio.value,
-                  style: TextStyle(color: Colors.white70),
+                  style: GoogleFonts.bricolageGrotesque(color: Colors.white70),
                 ),
               ),
               onEdit: () {
@@ -146,7 +159,10 @@ class EditProfilePage extends StatelessWidget {
             SizedBox(height: 10),
             Text(
               "Social media details",
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              style: GoogleFonts.bricolageGrotesque(
+                color: Colors.white,
+                fontSize: 14,
+              ),
             ),
             sectionCard(
               subtitle: Column(
@@ -218,7 +234,10 @@ class EditProfilePage extends StatelessWidget {
                           SizedBox(width: 8),
                           Text(
                             "Delete my account",
-                            style: TextStyle(color: Colors.white, fontSize: 16),
+                            style: GoogleFonts.bricolageGrotesque(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
                           ),
                         ],
                       ),
@@ -285,8 +304,14 @@ class EditProfilePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(value, style: TextStyle(color: Colors.white70)),
-                Text(value1, style: TextStyle(color: Colors.white70)),
+                Text(
+                  value,
+                  style: GoogleFonts.bricolageGrotesque(color: Colors.white70),
+                ),
+                Text(
+                  value1,
+                  style: GoogleFonts.bricolageGrotesque(color: Colors.white70),
+                ),
               ],
             ),
           ),
@@ -302,13 +327,12 @@ class EditProfilePage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Header: Photos + Edit
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               "Photos",
-              style: TextStyle(
+              style: GoogleFonts.bricolageGrotesque(
                 color: Colors.white,
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
@@ -317,9 +341,6 @@ class EditProfilePage extends StatelessWidget {
             editResuse(onEdit: () {}),
           ],
         ),
-        SizedBox(height: 10),
-
-        // Grid of images
         GridView.builder(
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,
@@ -328,12 +349,11 @@ class EditProfilePage extends StatelessWidget {
             crossAxisCount: 2,
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
-            childAspectRatio: 1,
           ),
           itemBuilder: (context, index) {
             return Card(
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(10),
                 child: Image.asset(photoPaths[index], fit: BoxFit.cover),
               ),
             );
@@ -347,18 +367,15 @@ class EditProfilePage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Title
         Text(
           "Your preferences",
-          style: TextStyle(
+          style: GoogleFonts.bricolageGrotesque(
             color: Colors.white,
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
         ),
         SizedBox(height: 10),
-
-        // Box with icon, label, edit
         Container(
           padding: EdgeInsets.all(12),
           decoration: BoxDecoration(
@@ -423,7 +440,10 @@ class EditProfilePage extends StatelessWidget {
         children: [
           Image.asset(iconPath, width: 16, height: 16, color: Colors.white),
           SizedBox(width: 6),
-          Text(label, style: TextStyle(color: Colors.white)),
+          Text(
+            label,
+            style: GoogleFonts.bricolageGrotesque(color: Colors.white),
+          ),
           if (showDot)
             Padding(
               padding: const EdgeInsets.only(left: 4.0),
@@ -453,7 +473,10 @@ class EditProfilePage extends StatelessWidget {
             color: Colors.purple,
           ),
           SizedBox(width: 6),
-          Text("Edit", style: TextStyle(color: Colors.purple, fontSize: 14)),
+          Text(
+            "Edit",
+            style: GoogleFonts.bricolageGrotesque(color: Colors.purple),
+          ),
         ],
       ),
     );

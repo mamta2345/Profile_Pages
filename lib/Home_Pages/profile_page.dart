@@ -32,20 +32,17 @@ class ProfilePage extends StatelessWidget {
               SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 8,
+                  horizontal: 16,
                   vertical: 10,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Transform.scale(
-                      scale: 1.3,
-                      child: Image.asset(
-                        'assets/icons/loopin.png',
-                        color: Colors.white,
-                        height: 40, // keep small height
-                        width: 100,
-                      ),
+                    Image.asset(
+                      'assets/icons/loopin.png',
+                      color: Colors.white,
+                      height: 40, // keep small height
+                      width: 80,
                     ),
                     IconButton(
                       icon: Icon(Icons.close, color: Colors.white),
@@ -129,7 +126,10 @@ class ProfilePage extends StatelessWidget {
                         children: [
                           Text(
                             controller.name.value,
-                            style: TextStyle(fontSize: 16, color: Colors.white),
+                            style: GoogleFonts.bricolageGrotesque(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
                           ),
                           SizedBox(width: 30),
                           Icon(Icons.brightness_3, color: Colors.red, size: 14),
@@ -144,7 +144,10 @@ class ProfilePage extends StatelessWidget {
                     Obx(
                       () => Text(
                         "${controller.age.value} yr, ${controller.gender.value}",
-                        style: TextStyle(fontSize: 14, color: Colors.white),
+                        style: GoogleFonts.bricolageGrotesque(
+                          color: Colors.white,
+                          fontSize: 14,
+                        ),
                       ),
                     ),
                   ],
@@ -170,17 +173,36 @@ class ProfilePage extends StatelessWidget {
                 children: [
                   Text(
                     "Complete your profile",
-                    style: TextStyle(color: Colors.grey, fontSize: 12),
-                  ),
-                  SizedBox(height: 6),
-                  Text(
-                    "Give others a glimpse of your personality\nwrite a bio that shines",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                      color: Colors.white,
+                    style: GoogleFonts.bricolageGrotesque(
+                      color: Colors.grey,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
+                  SizedBox(height: 6),
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Give others a glimpse of your personality\n",
+                          style: GoogleFonts.bricolageGrotesque(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "write a bio that shines",
+                          style: GoogleFonts.bricolageGrotesque(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
                   SizedBox(height: 16),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 12),
@@ -236,8 +258,10 @@ class ProfilePage extends StatelessWidget {
 
                         // Right Side: Plus Button
                         IconButton(
-                          icon: Icon(
-                            Icons.add_circle_outline,
+                          icon: Image.asset(
+                            'assets/icons/Plus Circle.png',
+                            width: 20,
+                            height: 20,
                             color: Colors.white,
                           ),
                           onPressed: () {
