@@ -3,9 +3,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:profile_pages/Controller/page_controller.dart';
-import 'package:profile_pages/Home_Pages/edit_profile_page.dart';
-import 'package:profile_pages/Home_Pages/login_page.dart';
+import 'package:profile_pages/Controller/Profile_pages/page_controller.dart';
+import 'package:profile_pages/Home_Pages_UI/edit_profile_page.dart';
+import 'package:profile_pages/Home_Pages_UI/login_page.dart';
 import 'package:profile_pages/Reusable/image_reusable.dart';
 
 class ProfilePage extends StatelessWidget {

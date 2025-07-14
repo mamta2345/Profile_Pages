@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:profile_pages/Controller/edit_profil.contoller.dart';
+import 'package:profile_pages/Controller/Profile_pages/edit_profil.contoller.dart';
 
 class EditProfilePage extends StatelessWidget {
   final controller = Get.put(EditProfileController());
